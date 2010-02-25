@@ -13,15 +13,15 @@ Here is an example show you how to send a phone text message to some body.
 
     PIGEON_CONTANCT = {
       'Awhy' => '1318698xxxx',
-      'Frank' => '1515807xxxx'
+      'Joby' => '1510571xxxx'
     }
 
-  
     PigeonFu.send_message :to => '1871989xxxx', :say => 'Hi!'
     PigeonFu.send_message :to => 'Awhy', :say => 'Hello?'
     PigeonFu.send_message :to => :all, :say => '信春鸽祝大家新春快乐!'
     PigeonFu.send_message_to_me 'Just testing to send a short text message from my program what I am writting now!'
-
+    
+See the examples/ folder for more examples.
 
 **TODO**
 
