@@ -1,28 +1,35 @@
-PigeonFu is a Ruby gem for building voice and SMS applications. It allows your web application to easily make and receive phone calls and SMS text messages using the ChinaTelecom Open API. You can build hosted IVR, PBX and SMS applications easily and quickly.
+### About PigeonFu
 
-**Install**
+PigeonFu is a Ruby gem for building voice and SMS applications. It allows your web application to easily make and receive phone calls and SMS text messages using the ChinaTelecom Open API. You can send E-FAX by using PigeonFu or build hosted IVR, WebCall and SMS applications easily and quickly.
 
-    $ sudo gem install pigeonfu
 
-**Usage**
+### Installation
+
+    $ gem install pigeon_fu --pre
+
+
+### Usage
+
+You need to register for an authorized app-account on the ChinaTelecom open platform(http://www.189works.com/) first.
 
 Here is an example show you how to send a phone text message to some body.
 
-    PIGEON_ACCOUNT_SID = '10003551'
-    PIGEON_ACCOUNT_TOKEN = '76e9bde81f1e4e51ac8d86517e4bxxxx'
+    require 'pigeon_fu'
 
-    PIGEON_CONTANCT = {
-      'Awhy' => '1318698xxxx',
-      'Joby' => '1510571xxxx'
-    }
+    ENV["PIGEON_ACCOUNT_SID"]   = '1000XXXX'                         # YOUR_APP_KEY
+    ENV["PIGEON_ACCOUNT_TOKEN"] = '76e9bde81f1e4e51ac8d86517e4bXXXX' # YOUR_APP_SECRET_KEY
 
-    PigeonFu.send_message :to => '1871989xxxx', :say => 'Hi!'
-    PigeonFu.send_message :to => 'Awhy', :say => 'Hello?'
-    PigeonFu.send_message :to => :all, :say => '信春鸽祝大家新春快乐!'
-    PigeonFu.send_message_to_me 'Just testing to send a short text message from my program what I am writting now!'
-    
+    PigeonFu.send_sms :to  => '1318698XXXX',
+                      :say => 'Just testing to send a sms from my program what I am writting now!'
+
 See the examples/ folder for more examples.
 
-**TODO**
 
-I am working on it currently, more features will be added in later.
+### TODO
+
+I am working on it currently, more features will be added in later versions, and it will support both Ruby on Rails 3.0 and Sinatra ASAP.
+
+
+### Copyright
+
+Copyright (c) 2010 why404(why404#gmail), released under the MIT license.

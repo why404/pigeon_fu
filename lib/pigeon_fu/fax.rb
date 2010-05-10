@@ -1,5 +1,5 @@
 module PigeonFu
-  class Ivr
+  class Fax
     
     module ClassMethods #TODO
     end

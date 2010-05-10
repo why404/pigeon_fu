@@ -1,7 +1,7 @@
 module PigeonFu
   module Rest
     class << self
-      def get(url, hashed_vars)
+      def get(url, hashed_vars = {})
         res = request(url, 'GET', hashed_vars)
         process_result(res, url)
       end
@@ -34,6 +34,7 @@ module PigeonFu
           if method && method == 'GET'
             url = build_get_uri(url, params)
           end
+
           uri = URI.parse(url)
           
           http = Net::HTTP.new(uri.host, uri.port)
