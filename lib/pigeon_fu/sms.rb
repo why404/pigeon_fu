@@ -20,7 +20,7 @@ module PigeonFu
       end
       
       def encoded_message_from(content)
-        Base64.encode64(content.strip).gsub('+', '%2B').gsub('&','%26').chomp! # CGI.escape
+        Base64.encode64(content.strip).gsub('+', '%2B').gsub('&','%26').gsub("\n","") # CGI.escape
       end
       
       def fetch_receivers_from(given_receivers)
