@@ -5,14 +5,14 @@ PigeonFu is a Ruby gem for building voice and SMS applications. It allows your w
 
 ### Installation
 
-    $ gem install pigeon_fu --pre
+    $ gem install pigeon_fu
 
 
 ### Usage
 
-You need to register for an authorized app-account on the ChinaTelecom open platform(http://www.189works.com/) first.
+First, you need to register for an authorized app-account on the ChinaTelecom open platform(http://www.189works.com/).
 
-Here is an example show you how to send a phone text message to some body.
+Then allow me writen an example show you how to send a phone text message to some body.
 
     require 'pigeon_fu'
 
