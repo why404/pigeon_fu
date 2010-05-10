@@ -15,7 +15,7 @@ module PigeonFu #:nodoc:
     end
 
     def message
-      "Unauthorized: error code #{@error_code}, #{@error_desc}."
+      "Error code #{@error_code}, #{@error_desc}."
     end
 
     def to_s

@@ -1,6 +1,6 @@
 require 'rake'
 require 'rake/gempackagetask'
-require 'lib/pigeon_fu/version.rb'
+require File.dirname(__FILE__) + '/lib/pigeon_fu/version'
 
 PKG_FILES = FileList[
   '[a-zA-Z-]*', 
